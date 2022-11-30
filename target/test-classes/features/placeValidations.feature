@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 Feature: Validation place API's
 
-  @AddPlace
+  @AddPlace @Regression
   Scenario Outline: Verify if place being successfully added using AddPlaceAPI
     Given Add place payload "<name>" "<language>" "<address>"
     When Use calls "AddPlaceAPI" with "POST" http request
@@ -32,7 +32,7 @@ Feature: Validation place API's
       | XYZ  | English  | Pune    |
 
   #      | ABC  | French   | Mumbai  |
-  @DeletePlace
+  @DeletePlace @Regression
   Scenario: Verify if Delete Place functionality is working
     Given DeletePlace Payload
     When Use calls "deletePlaceAPI" with "POST" http request
